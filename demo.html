@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Sample Screen</h2>
+    <input type="number" id="addArr">
+    <button onclick="add()">Add</button>
+    <button onclick="display()">Display</button>
+    <hr>
+    <p id="hienthi"></p>
+
+    <script>
+        let arr = [];
+        function add() {
+            let a = document.getElementById("addArr").value;
+            arr.push(a);
+        }
+        function display(){
+            let str = "";
+            for(let i = 0;i < arr.length; i++){
+                str += "Element " + i + " = " + arr[i] + "<br>";
+            }
+            document.getElementById("hienthi").innerHTML = str;
+            
+        }
+
+
+    </script>
+</body>
+
+</html>
